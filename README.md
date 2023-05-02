@@ -1,1 +1,0 @@
-# ajayjohnalex.github.io
