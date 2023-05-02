@@ -1,0 +1,94 @@
+{% extends 'mainLayout.html' %}
+{% block content %}
+
+    <div class="container-fluid">
+      <h1> Keyword Analysis</h1>
+    </div>
+    <div class="container-fluid">
+    <div class="row jumbotron">
+            <p class="lead">Keywords play a crucial role in locating the article from information retrieval systems, bibliographic databases and for search engine optimization. Keywords also help to categorize the article into the relevant subject or discipline.</p>
+              <p> In TFIDF, text pre-processing is removing punctuation and lower casing the words. We do not have to worry about the stop words.</p>
+              <ul>
+              <li>TFIDF is the product of the TF and IDF scores of the term.</li>
+              <li>TF = number of times the term appears in the doc/total number of words in the doc</li>
+              <li>IDF = ln(number of docs/number docs the term appears in)</li>
+              <li>Higher the TFIDF score, the rarer the term is and vice-versa.</li>
+              <li>TFIDF is successfully used by search engines like Google, as a ranking factor for content.</li>
+              <li>The whole idea is to weigh down the frequent terms while scaling up the rare ones.</li>
+            </ul>
+    </div>
+    </div>
+     <!-- Main Input For Receiving Query to our ML -->
+    <div class="container-fluid">
+      <b>ENTER SAMPLE DATA TO FIND KEYWORD FROM IT.</b><br>
+    <br>
+    <form action="{{ url_for('index')}}"method="post" class="container">
+      <textarea cols="130" rows="10" name = "description" placeholder="SAMPLE DATA" required="required" ></textarea>
+<!--       <br><br> -->
+<!--       <div class="container"> -->
+          <legend><b>Model</b> </legend>
+          <select name="model_type" >
+              <option value="TFIDF WITH N-GRAMS">TFIDF WITH N-GRAMS</option>
+              <!-- <option value="TFIDF">SIMPLE TFIDF</option> -->
+              <!-- <option value="RANK GRAPH">RANK GRAPH</option> -->
+          </select>
+          <br>
+          <br>
+          <legend><b>Select N-grams</b></legend>
+          <i>Co-occuring words are known as "n-grams", where "n" is a number saying how long a string of words you considered.</i>
+          <br>
+          <u>It is preferred to use lesser N gram value</u>
+          <!-- <b>[The select N-gram option doesn't work with simple TFIDF model ]</b> -->
+          <!-- <br><br> -->
+          <br><br>
+          <select name="n_grams" >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          </select>
+          <pre></pre>
+          <br>
+          
+          <legend><b>Select no of Keywords</b></legend>
+          <select name="no_of_keywords" >
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+          </select>
+          <br>
+          <br>
+          <!-- <b>Stop words</b> <br>
+          <textarea name="userStopwords" placeholder="Enter words with comma seperation" cols="40" rows="10" required='required'></textarea>
+          <br><br>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio"  name="stopWords" value="No" checked>
+              Include These words as Stop Words <br>
+              <input type="radio"  name="stopWords" value="Yes" >
+              Exclude These words as Stop Words
+            </label>
+          </div><br><br> -->
+          <button type="submit" class="btn btn-primary btn-sm">Predict</button>
+<!--       </div> -->
+
+    </form>
+    </div><br>
+    <div class="container-fluid">
+      <div class="row jumbotron">
+      <br><br>
+        <b>The ENTERED SAMPLE DATA:</b>
+        <br><br>
+        <i>{{sample_input}}</i>
+        <br><br>
+      <div class="container-fluid">
+          <br><br><b>KEYWORDS:</b>
+          <br><br>
+          {{keyword}}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
