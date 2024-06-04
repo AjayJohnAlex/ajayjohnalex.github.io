@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DaTaSciEnCe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.2"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="static\style.css" type="text/css" >
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="static\\img\\logo_1.png">
+            <h2><pre>DaTaSciEnCe</pre></h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">
+                        Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blogs.html">
+                        Blogs
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        About Me
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="image-tool" class="section">
+    <div class="container">
+      <center><h2 class="title">Image Comparison Tool</h2></center>
+      <br>
+      <div class="content">
+        <h3 class="subtitle">What did I build?</h3>
+        <p>An Image Comparison Tool which identifies duplicate images to increase processing speed.</p>
+        <div class="col-lg-6">
+            <img src="static\img\orb_method.jpg" alt="Developer Image" class="img-fluid">
+        </div>
+        <h3 class="subtitle">How did I build it?</h3>
+        <div class="col-lg-6">
+            <img src="static\img\orb_method2.jpg" alt="Developer Image" class="img-fluid">
+        </div><br>
+        <p>I built a module with 2 APIs that utilizes OpenCV for image comparison and Cron Jobs for scheduling. The APIs are used with Azure Functions and Azure Queues. I used Python, Pattern Recognition, Data Engineering, Microsoft Azure, Computer Vision skills.</p>
+        
+        <h3 class="subtitle">Challenges &amp; Lessons Learned</h3>
+        <ul>
+          <li>Ensuring accuracy of image comparison with an accuracy of 99.7%.</li>
+          <li>Optimizing processing speed with an efficiency improvement of 66%.</li>
+          <li>Working with large volumes of data and storage using Microsoft Azure.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+
+<!--- Fixed background -->
+<hr class="my-4">
+<figure>
+    <div class="fixed-wrap">
+        <div id="fixed">
+            <img src="\static\img\mac.png">
+        </div>
+    </div>
+</figure>
+
+<!--- Emoji Section -->
+<button class="btn btn-outline-dark btn-sm btn-block" data-toggle="collapse" data-target="#emoji" >CLICK FOR FUN</button>
+<div id="emoji" class="collapse">
+<div class="container-fluid padding">
+    <div class="row text-center">
+        <div class="col-sm-6 col-md-3">
+            <img class="gif" src="https://media.giphy.com/media/6JFNBbf4us2Os/200w_d.gif">
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <img class="gif" src="https://media.giphy.com/media/xSlV7GyC4M8Te/200w_d.gif">
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <img class="gif" src="http://giphygifs.s3.amazonaws.com/media/J0ehmPrkg6H3a/200w_d.gif">
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <img class="gif" src="https://media.giphy.com/media/zLTodQvrU79Sw/200w_d.gif">
+        </div>
+    </div>
+</div>
+</div>
+<!--- Footer -->
+<footer >
+    <div class="container-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <img src="static//img//logo_1.png">
+            <hr class="light">
+    <!--- Connect -->
+            <div class="container-fluid padding">
+            <div class="row welcome text-center">
+                <div class="col-12">
+                    <h2> Connect</h2>
+                </div>
+                <div class="col-12 social padding">
+                    <a href="https://github.com/AjayJohnAlex" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ajay-john-alex96/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://datascienceportfolio.onrender.com" target="_blank">
+                        <i class="fa fa-code"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ajay_john_alex/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        </div >
+
+        <div class="col-12">
+            <hr class="light100">
+            <h5>&copy; Ajay John Alex</h5>
+        </div>
+    </div>
+    </div>
+</footer>
+</body>
+</html>
